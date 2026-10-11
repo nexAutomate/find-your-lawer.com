@@ -16,16 +16,36 @@
 
 <body class="lawyer-page">
 
-  <header class="lawyer-nav">
-    <a class="lawyer-logo" href="index.html">LexNova<span>.</span></a>
+  
+<header>
+  <div class="container navbar">
+    <a class="brand" href="index.html">
+      LAWERS<span>.COM</span>
+      <small>Legal services, simplified</small>
+    </a>
 
-    <nav class="lawyer-nav-links" aria-label="Main navigation">
+    <nav class="nav-links" id="navLinks">
       <a href="index.html">Home</a>
-      <a href="lawyers.html">Find a Lawyer</a>
+      <a class="active" href="lawyers.html">Find a Lawyer</a>
       <a href="services.html">Services</a>
       <a href="contact.html">Contact</a>
     </nav>
-  </header>
+
+    <a class="btn btn-gold" href="contact.html">
+      Book Consultation <i class="bi bi-arrow-up-right"></i>
+    </a>
+
+    <button
+      class="menu-toggle"
+      id="menuToggle"
+      aria-label="Toggle navigation"
+      aria-expanded="false"
+    >
+      <i class="bi bi-list"></i>
+    </button>
+  </div>
+</header>
+```
 
   <section class="lawyer-hero">
     <div class="eyebrow">Your legal journey starts here</div>

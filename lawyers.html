@@ -1,0 +1,379 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Find a Lawyer | LexNova</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <link rel="stylesheet" href="lawyers.css">
+</head>
+
+<body class="lawyer-page">
+
+  <header class="lawyer-nav">
+    <a class="lawyer-logo" href="index.html">LexNova<span>.</span></a>
+
+    <nav class="lawyer-nav-links" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="lawyers.html">Find a Lawyer</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="lawyer-hero">
+    <div class="eyebrow">Your legal journey starts here</div>
+    <h1>Find the Right Lawyer for You</h1>
+    <p>
+      Explore our sample lawyer profiles, compare practice areas and
+      consultation fees, and discover the right fit for your legal needs.
+    </p>
+  </section>
+
+  <form class="lawyer-search" id="lawyerSearchForm">
+    <input
+      type="search"
+      id="lawyerKeyword"
+      placeholder="Search lawyer, legal issue or keyword..."
+      aria-label="Search lawyers"
+    >
+
+    <select id="lawyerSpecialty" aria-label="Filter by specialisation">
+      <option value="">All Specialisations</option>
+      <option value="Family Law">Family Law</option>
+      <option value="Corporate Law">Corporate Law</option>
+      <option value="Criminal Law">Criminal Law</option>
+      <option value="Property Law">Property Law</option>
+      <option value="Employment Law">Employment Law</option>
+      <option value="Intellectual Property">Intellectual Property</option>
+    </select>
+
+    <select id="lawyerCity" aria-label="Filter by city">
+      <option value="">All Cities</option>
+      <option value="Delhi">Delhi</option>
+      <option value="Mumbai">Mumbai</option>
+      <option value="Bengaluru">Bengaluru</option>
+      <option value="Lucknow">Lucknow</option>
+      <option value="Pune">Pune</option>
+      <option value="Noida">Noida</option>
+    </select>
+
+    <button class="gold-btn" type="submit">
+      <i class="fa-solid fa-magnifying-glass"></i> Search
+    </button>
+  </form>
+
+  <main class="lawyer-content">
+    <div class="lawyer-section-heading">
+      <div>
+        <h2>Meet Our Legal Experts</h2>
+        <p>Sample profiles created for the LexNova website demo.</p>
+      </div>
+      <div class="lawyer-count" id="lawyerCount">6 lawyers</div>
+    </div>
+
+    <div class="lawyer-grid" id="lawyerGrid">
+
+      <!-- DEMO LAWYER 1 -->
+      <article class="lawyer-card"
+        data-name="Aarav Mehta"
+        data-specialty="Corporate Law"
+        data-city="Delhi"
+        data-search="business company startup contracts corporate">
+
+        <img class="lawyer-photo"
+          src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=700&q=85"
+          alt="Demo portrait of Aarav Mehta"
+          loading="lazy">
+
+        <div class="lawyer-card-body">
+          <span class="demo-label">Demo profile</span>
+          <h3>Aarav Mehta</h3>
+          <div class="lawyer-specialty">Corporate & Business Law</div>
+
+          <div class="lawyer-meta">
+            <span><i class="fa-solid fa-briefcase"></i> 12 years' experience</span>
+            <span><i class="fa-solid fa-location-dot"></i> Delhi</span>
+          </div>
+
+          <p class="lawyer-bio">
+            Sample profile for business agreements, startup matters and
+            corporate legal guidance.
+          </p>
+
+          <div class="lawyer-price-row">
+            <div>
+              <div class="price-label">Consultation fee</div>
+              <div class="lawyer-price">₹1,500</div>
+            </div>
+            <span class="price-label">30 minutes</span>
+          </div>
+
+          <div class="lawyer-card-actions">
+            <button class="outline-btn view-lawyer" type="button">View Profile</button>
+            <a class="gold-btn book-lawyer" href="contact.html">Book Consultation</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- DEMO LAWYER 2 -->
+      <article class="lawyer-card"
+        data-name="Ananya Sharma"
+        data-specialty="Family Law"
+        data-city="Noida"
+        data-search="divorce family child custody marriage">
+
+        <img class="lawyer-photo"
+          src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=700&q=85"
+          alt="Demo portrait of Ananya Sharma"
+          loading="lazy">
+
+        <div class="lawyer-card-body">
+          <span class="demo-label">Demo profile</span>
+          <h3>Ananya Sharma</h3>
+          <div class="lawyer-specialty">Family & Divorce Law</div>
+
+          <div class="lawyer-meta">
+            <span><i class="fa-solid fa-briefcase"></i> 9 years' experience</span>
+            <span><i class="fa-solid fa-location-dot"></i> Noida</span>
+          </div>
+
+          <p class="lawyer-bio">
+            Sample profile for family disputes, divorce proceedings and
+            child custody matters.
+          </p>
+
+          <div class="lawyer-price-row">
+            <div>
+              <div class="price-label">Consultation fee</div>
+              <div class="lawyer-price">₹1,000</div>
+            </div>
+            <span class="price-label">30 minutes</span>
+          </div>
+
+          <div class="lawyer-card-actions">
+            <button class="outline-btn view-lawyer" type="button">View Profile</button>
+            <a class="gold-btn book-lawyer" href="contact.html">Book Consultation</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- DEMO LAWYER 3 -->
+      <article class="lawyer-card"
+        data-name="Rohan Kapoor"
+        data-specialty="Criminal Law"
+        data-city="Mumbai"
+        data-search="criminal bail court litigation defence">
+
+        <img class="lawyer-photo"
+          src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=700&q=85"
+          alt="Demo portrait of Rohan Kapoor"
+          loading="lazy">
+
+        <div class="lawyer-card-body">
+          <span class="demo-label">Demo profile</span>
+          <h3>Rohan Kapoor</h3>
+          <div class="lawyer-specialty">Criminal Law</div>
+
+          <div class="lawyer-meta">
+            <span><i class="fa-solid fa-briefcase"></i> 15 years' experience</span>
+            <span><i class="fa-solid fa-location-dot"></i> Mumbai</span>
+          </div>
+
+          <p class="lawyer-bio">
+            Sample profile for criminal defence, bail applications and
+            court representation matters.
+          </p>
+
+          <div class="lawyer-price-row">
+            <div>
+              <div class="price-label">Consultation fee</div>
+              <div class="lawyer-price">₹2,000</div>
+            </div>
+            <span class="price-label">30 minutes</span>
+          </div>
+
+          <div class="lawyer-card-actions">
+            <button class="outline-btn view-lawyer" type="button">View Profile</button>
+            <a class="gold-btn book-lawyer" href="contact.html">Book Consultation</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- DEMO LAWYER 4 -->
+      <article class="lawyer-card"
+        data-name="Priya Verma"
+        data-specialty="Property Law"
+        data-city="Lucknow"
+        data-search="property real estate land agreement registration">
+
+        <img class="lawyer-photo"
+          src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=700&q=85"
+          alt="Demo portrait representing Priya Verma"
+          loading="lazy">
+
+        <div class="lawyer-card-body">
+          <span class="demo-label">Demo profile</span>
+          <h3>Priya Verma</h3>
+          <div class="lawyer-specialty">Property & Real Estate Law</div>
+
+          <div class="lawyer-meta">
+            <span><i class="fa-solid fa-briefcase"></i> 8 years' experience</span>
+            <span><i class="fa-solid fa-location-dot"></i> Lucknow</span>
+          </div>
+
+          <p class="lawyer-bio">
+            Sample profile for property agreements, ownership disputes and
+            real estate documentation.
+          </p>
+
+          <div class="lawyer-price-row">
+            <div>
+              <div class="price-label">Consultation fee</div>
+              <div class="lawyer-price">₹800</div>
+            </div>
+            <span class="price-label">30 minutes</span>
+          </div>
+
+          <div class="lawyer-card-actions">
+            <button class="outline-btn view-lawyer" type="button">View Profile</button>
+            <a class="gold-btn book-lawyer" href="contact.html">Book Consultation</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- DEMO LAWYER 5 -->
+      <article class="lawyer-card"
+        data-name="Kabir Malhotra"
+        data-specialty="Employment Law"
+        data-city="Bengaluru"
+        data-search="employment job workplace salary termination labour">
+
+        <img class="lawyer-photo"
+          src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=700&q=85"
+          alt="Demo portrait of Kabir Malhotra"
+          loading="lazy">
+
+        <div class="lawyer-card-body">
+          <span class="demo-label">Demo profile</span>
+          <h3>Kabir Malhotra</h3>
+          <div class="lawyer-specialty">Employment & Labour Law</div>
+
+          <div class="lawyer-meta">
+            <span><i class="fa-solid fa-briefcase"></i> 10 years' experience</span>
+            <span><i class="fa-solid fa-location-dot"></i> Bengaluru</span>
+          </div>
+
+          <p class="lawyer-bio">
+            Sample profile for employment contracts, workplace disputes and
+            employee rights questions.
+          </p>
+
+          <div class="lawyer-price-row">
+            <div>
+              <div class="price-label">Consultation fee</div>
+              <div class="lawyer-price">₹1,200</div>
+            </div>
+            <span class="price-label">30 minutes</span>
+          </div>
+
+          <div class="lawyer-card-actions">
+            <button class="outline-btn view-lawyer" type="button">View Profile</button>
+            <a class="gold-btn book-lawyer" href="contact.html">Book Consultation</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- DEMO LAWYER 6 -->
+      <article class="lawyer-card"
+        data-name="Ishita Rao"
+        data-specialty="Intellectual Property"
+        data-city="Pune"
+        data-search="intellectual property trademark copyright patent brand">
+
+        <img class="lawyer-photo"
+          src="https://images.unsplash.com/photo-1598550874175-4d0ef436c909?auto=format&fit=crop&w=700&q=85"
+          alt="Demo portrait representing Ishita Rao"
+          loading="lazy">
+
+        <div class="lawyer-card-body">
+          <span class="demo-label">Demo profile</span>
+          <h3>Ishita Rao</h3>
+          <div class="lawyer-specialty">Intellectual Property Law</div>
+
+          <div class="lawyer-meta">
+            <span><i class="fa-solid fa-briefcase"></i> 7 years' experience</span>
+            <span><i class="fa-solid fa-location-dot"></i> Pune</span>
+          </div>
+
+          <p class="lawyer-bio">
+            Sample profile for trademarks, copyright protection and
+            intellectual property questions.
+          </p>
+
+          <div class="lawyer-price-row">
+            <div>
+              <div class="price-label">Consultation fee</div>
+              <div class="lawyer-price">₹1,000</div>
+            </div>
+            <span class="price-label">30 minutes</span>
+          </div>
+
+          <div class="lawyer-card-actions">
+            <button class="outline-btn view-lawyer" type="button">View Profile</button>
+            <a class="gold-btn book-lawyer" href="contact.html">Book Consultation</a>
+          </div>
+        </div>
+      </article>
+
+      <div class="no-lawyers" id="noLawyers">
+        <i class="fa-solid fa-magnifying-glass fa-2x"></i>
+        <h3>No matching demo lawyers found</h3>
+        <p>Try another name, specialisation or city.</p>
+      </div>
+    </div>
+
+    <div class="lawyer-note">
+      <strong>Portfolio demo notice:</strong> All lawyer names, experience,
+      locations and consultation prices on this page are fictional sample
+      data for website demonstration only. Portraits are illustrative images.
+      No real lawyer availability or booking is being represented.
+    </div>
+  </main>
+
+  <footer class="lawyer-footer">
+    <p>© <span id="currentYear"></span> LexNova. Portfolio demonstration website.</p>
+    <p><a href="index.html">Home</a> · <a href="services.html">Services</a> · <a href="contact.html">Contact</a></p>
+  </footer>
+
+  <!-- Demo profile popup -->
+  <div class="lawyer-modal" id="lawyerModal" role="dialog"
+       aria-modal="true" aria-labelledby="modalLawyerName">
+    <div class="lawyer-modal-box">
+      <button class="lawyer-modal-close" id="closeLawyerModal"
+              type="button" aria-label="Close">&times;</button>
+
+      <span class="demo-label">Demo profile</span>
+      <h2 id="modalLawyerName">Lawyer Name</h2>
+      <p id="modalLawyerDetails"></p>
+      <p>
+        This is a sample lawyer profile for the LexNova portfolio demo.
+        The information shown is fictional and does not represent an actual
+        legal professional.
+      </p>
+      <a href="contact.html" class="gold-btn">Contact LexNova</a>
+    </div>
+  </div>
+
+  <script src="lawyers.js">
+   
+  </script>
+</body>
+</html>
+

@@ -1,0 +1,980 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap");
+:root {
+  --navy: #101a2c;
+  --gold: #c5a46d;
+  --ivory: #f8f6f1;
+  --ink: #1b2638;
+  --muted: #687386;
+  --line: #e7e3db;
+  --shadow: 0 16px 45px #101a2c12;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+body {
+  font-family: "DM Sans", sans-serif;
+  color: var(--ink);
+  line-height: 1.65;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+button {
+  cursor: pointer;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+.container {
+  width: min(1160px, calc(100% - 40px));
+  margin: auto;
+}
+h1,
+h2,
+h3 {
+  font-family: "Playfair Display", serif;
+  line-height: 1.16;
+}
+h1 {
+  font-size: clamp(2.7rem, 5vw, 4.7rem);
+}
+h2 {
+  font-size: clamp(2rem, 3.5vw, 3rem);
+}
+h3 {
+  font-size: 1.25rem;
+}
+p {
+  color: var(--muted);
+}
+.eyebrow {
+  color: #987743;
+  font-size: 0.76rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.section {
+  padding: 82px 0;
+}
+.section-head {
+  margin-bottom: 32px;
+  max-width: 760px;
+}
+.section-head h2 {
+  margin-top: 12px;
+}
+.section-head p {
+  margin-top: 13px;
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 12px 19px;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  transition: 0.2s;
+}
+.btn-gold {
+  background: var(--gold);
+  color: var(--navy);
+}
+.btn-gold:hover {
+  background: #e8d8b8;
+  transform: translateY(-2px);
+}
+.btn-dark {
+  background: var(--navy);
+  color: white;
+}
+.btn-dark:hover {
+  background: #293c58;
+}
+.btn-outline {
+  border-color: #d9d4ca;
+  color: var(--navy);
+  background: transparent;
+}
+.btn-outline:hover {
+  border-color: var(--gold);
+  background: #fbf8f1;
+}
+.btn-small {
+  padding: 8px 11px;
+  font-size: 0.8rem;
+}
+header {
+  height: 80px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #ffffffed;
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid #101a2c12;
+}
+.navbar {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 22px;
+}
+.brand {
+  font:
+    700 1.8rem "Playfair Display",
+    serif;
+  color: var(--navy);
+  line-height: 1;
+}
+.brand span {
+  color: var(--gold);
+}
+.brand small {
+  display: block;
+  font:
+    600 0.55rem "DM Sans",
+    sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1.7px;
+  color: var(--muted);
+  margin-top: 5px;
+}
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+.nav-links a {
+  font-size: 0.86rem;
+  font-weight: 700;
+  color: #344052;
+}
+.nav-links a:hover,
+.nav-links a.active {
+  color: #a17c42;
+}
+.menu-toggle {
+  display: none;
+  background: transparent;
+  border: 0;
+  color: var(--navy);
+  font-size: 1.6rem;
+}
+.hero,
+.page-hero {
+  background: var(--ivory);
+  padding: 66px 0 72px;
+}
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 52px;
+  align-items: center;
+}
+.hero h1 {
+  color: var(--navy);
+  margin-top: 17px;
+}
+.hero h1 em {
+  font-style: normal;
+  color: #a17d46;
+}
+.hero-copy > p {
+  font-size: 1.05rem;
+  margin: 22px 0 26px;
+  max-width: 520px;
+}
+.hero-buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.hero-trust {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 28px;
+}
+.hero-trust span {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #465064;
+}
+.hero-trust i {
+  color: #a17d46;
+  margin-right: 5px;
+}
+.hero-image-wrap {
+  height: 480px;
+  position: relative;
+}
+.hero-image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 4px 80px 4px 4px;
+}
+.image-caption {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  padding: 18px;
+  border-left: 2px solid var(--gold);
+  background: #101a2cbb;
+  color: white;
+}
+.image-caption p {
+  font:
+    1.3rem "Playfair Display",
+    serif;
+  color: white;
+}
+.image-caption small {
+  color: #e4dfd5;
+}
+.strip {
+  background: var(--navy);
+  padding: 22px 0;
+}
+.strip-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+.strip strong {
+  font:
+    1.15rem "Playfair Display",
+    serif;
+  color: #e8d8b8;
+}
+.strip span {
+  font-size: 0.85rem;
+  color: #d3d9e2;
+}
+.practice-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+.practice-card {
+  border: 1px solid var(--line);
+  padding: 22px 18px;
+  min-height: 185px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: 0.2s;
+}
+.practice-card:hover,
+.lawyer-card:hover {
+  border-color: var(--gold);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow);
+}
+.icon-box {
+  height: 44px;
+  width: 44px;
+  background: #f5efe3;
+  color: #987743;
+  display: grid;
+  place-items: center;
+  font-size: 1.25rem;
+  margin-bottom: 16px;
+  flex-shrink: 0;
+}
+.practice-card h3 {
+  font:
+    700 1rem "DM Sans",
+    sans-serif;
+  margin-bottom: 7px;
+}
+.practice-card p {
+  font-size: 0.82rem;
+}
+.practice-card a {
+  color: #987743;
+  font-size: 0.82rem;
+  font-weight: 700;
+  margin-top: auto;
+  padding-top: 13px;
+}
+.soft {
+  background: var(--ivory);
+}
+.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+}
+.split img {
+  height: 420px;
+  width: 100%;
+  object-fit: cover;
+}
+.feature-list {
+  display: grid;
+  gap: 19px;
+  margin-top: 25px;
+}
+.feature {
+  display: flex;
+  gap: 13px;
+}
+.feature .icon-box {
+  margin: 0;
+}
+.feature h3 {
+  font:
+    700 1rem "DM Sans",
+    sans-serif;
+  margin-bottom: 4px;
+}
+.feature p {
+  font-size: 0.86rem;
+}
+.steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 27px;
+}
+.step {
+  border-top: 1px solid var(--gold);
+  padding: 22px 4px;
+}
+.step b {
+  font:
+    2.4rem "Playfair Display",
+    serif;
+  color: var(--gold);
+}
+.step h3 {
+  margin: 16px 0 8px;
+}
+.step p {
+  font-size: 0.9rem;
+}
+.cta {
+  background: var(--navy);
+  padding: 52px 0;
+  color: white;
+}
+.cta-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+}
+.cta h2 {
+  max-width: 700px;
+}
+.cta p {
+  color: #c5cdda;
+  margin-top: 10px;
+}
+.cta .eyebrow {
+  color: #e8d8b8;
+}
+.page-hero h1 {
+  font-size: clamp(2.5rem, 4.5vw, 4rem);
+  margin-top: 12px;
+}
+.page-hero p {
+  max-width: 740px;
+  margin-top: 15px;
+}
+.lawyer-tools {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr auto;
+  gap: 10px;
+  background: white;
+  padding: 14px;
+  border: 1px solid var(--line);
+  margin-bottom: 20px;
+}
+.field,
+.lawyer-tools input,
+.lawyer-tools select {
+  width: 100%;
+  min-width: 0;
+  padding: 12px;
+  border: 1px solid #ddd9d1;
+  border-radius: 3px;
+  background: white;
+  outline: none;
+  color: var(--ink);
+}
+.field:focus,
+.lawyer-tools input:focus,
+.lawyer-tools select:focus {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px #c5a46d24;
+}
+.results-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  color: var(--muted);
+  font-size: 0.83rem;
+  margin: 15px 0;
+}
+.lawyer-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 17px;
+}
+.lawyer-card {
+  border: 1px solid var(--line);
+  background: white;
+  transition: 0.2s;
+  overflow: hidden;
+}
+.lawyer-photo {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+  object-position: top;
+  background: #e8e3d9;
+}
+.lawyer-info {
+  padding: 17px;
+}
+.demo-tag {
+  display: inline-block;
+  padding: 4px 7px;
+  background: #f5eddd;
+  color: #806333;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.lawyer-info h3 {
+  font-size: 1.13rem;
+}
+.lawyer-role {
+  color: #987743;
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin: 5px 0 11px;
+}
+.lawyer-meta {
+  font-size: 0.78rem;
+  color: #596273;
+  margin: 7px 0;
+}
+.lawyer-meta i {
+  color: #a17d46;
+  margin-right: 6px;
+}
+.lawyer-price {
+  border-top: 1px solid var(--line);
+  padding-top: 12px;
+  margin-top: 12px;
+  font-weight: 700;
+  color: var(--navy);
+}
+.lawyer-price small {
+  font-weight: 400;
+  color: var(--muted);
+  font-size: 0.7rem;
+}
+.card-actions {
+  display: flex;
+  gap: 7px;
+  margin-top: 13px;
+}
+.card-actions > * {
+  flex: 1;
+}
+.empty-state {
+  display: none;
+  text-align: center;
+  border: 1px dashed #d9d3c8;
+  padding: 35px;
+}
+.notice {
+  padding: 13px 15px;
+  border-left: 3px solid var(--gold);
+  background: #f8f3e9;
+  color: #5e523f;
+  font-size: 0.83rem;
+  margin-top: 18px;
+}
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 17px;
+}
+.service-detail {
+  border: 1px solid var(--line);
+  padding: 24px;
+  display: flex;
+  gap: 16px;
+}
+.service-detail h3 {
+  margin-bottom: 8px;
+}
+.service-detail p {
+  font-size: 0.88rem;
+}
+.service-detail .btn {
+  margin-top: 14px;
+}
+.audience-grid,
+.testimonials {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 17px;
+}
+.audience-card,
+.testimonial {
+  border: 1px solid var(--line);
+  padding: 24px;
+  background: white;
+}
+.audience-card h3 {
+  margin-bottom: 8px;
+}
+.audience-card p {
+  font-size: 0.88rem;
+}
+.testimonial .stars {
+  color: #b18b4c;
+  letter-spacing: 3px;
+}
+.testimonial blockquote {
+  font:
+    1.08rem/1.55 "Playfair Display",
+    serif;
+  margin: 13px 0 16px;
+}
+.testimonial small {
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+.faq-list {
+  max-width: 850px;
+  margin: auto;
+}
+.faq-item {
+  border-bottom: 1px solid var(--line);
+}
+.faq-q {
+  width: 100%;
+  background: transparent;
+  border: 0;
+  padding: 20px 0;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  font-weight: 700;
+  color: var(--navy);
+}
+.faq-a {
+  display: none;
+  padding: 0 30px 20px 0;
+}
+.faq-a p {
+  font-size: 0.9rem;
+}
+.faq-item.open .faq-a {
+  display: block;
+}
+.contact-grid {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 34px;
+}
+.contact-panel {
+  padding: 29px;
+  background: var(--navy);
+  color: white;
+}
+.contact-panel h2 {
+  font-size: 1.9rem;
+  margin-top: 12px;
+}
+.contact-panel > p {
+  color: #c5cdda;
+  margin-top: 12px;
+  font-size: 0.9rem;
+}
+.contact-detail {
+  display: flex;
+  gap: 13px;
+  margin-top: 22px;
+}
+.contact-detail i {
+  color: var(--gold);
+  font-size: 1.2rem;
+}
+.contact-detail strong {
+  display: block;
+  font-size: 0.88rem;
+}
+.contact-detail span {
+  display: block;
+  color: #c5cdda;
+  font-size: 0.8rem;
+}
+.form-card {
+  border: 1px solid var(--line);
+  padding: 27px;
+}
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+.form-group.full {
+  grid-column: 1/-1;
+}
+.form-group label {
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+.form-group textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+.check-line {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+.check-line input {
+  margin-top: 5px;
+}
+.feedback {
+  font-size: 0.85rem;
+  margin-top: 10px;
+}
+footer {
+  background: #0b1321;
+  color: white;
+  padding: 50px 0 20px;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1fr;
+  gap: 30px;
+  margin-bottom: 35px;
+}
+.footer-grid p {
+  color: #aeb8c7;
+  font-size: 0.83rem;
+  margin-top: 14px;
+  max-width: 290px;
+}
+.footer-grid h4 {
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #e8d8b8;
+  margin-bottom: 13px;
+}
+.footer-links {
+  display: grid;
+  gap: 9px;
+}
+.footer-links a {
+  color: #c3cbd5;
+  font-size: 0.82rem;
+}
+.footer-links a:hover {
+  color: #e8d8b8;
+}
+footer .brand {
+  color: white;
+}
+.footer-bottom {
+  border-top: 1px solid #2a3444;
+  padding-top: 18px;
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+.footer-bottom p {
+  font-size: 0.74rem;
+  margin: 0;
+  color: #aeb8c7;
+}
+.whatsapp {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: #20a66a;
+  color: white;
+  display: grid;
+  place-items: center;
+  font-size: 1.7rem;
+  z-index: 80;
+}
+.toast {
+  position: fixed;
+  bottom: 22px;
+  left: 50%;
+  transform: translate(-50%, 20px);
+  opacity: 0;
+  pointer-events: none;
+  background: var(--navy);
+  color: white;
+  padding: 12px 18px;
+  z-index: 3000;
+  transition: 0.25s;
+  font-size: 0.85rem;
+}
+.toast.show {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+.modal-backdrop {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: #08101dbb;
+  z-index: 2000;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+.modal-backdrop.show {
+  display: flex;
+}
+.modal {
+  position: relative;
+  background: white;
+  width: min(640px, 100%);
+  max-height: 90vh;
+  overflow: auto;
+  padding: 29px;
+}
+.modal-close {
+  position: absolute;
+  right: 14px;
+  top: 10px;
+  background: transparent;
+  border: 0;
+  font-size: 1.5rem;
+}
+.modal-profile {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 20px;
+  margin: 12px 0;
+}
+.modal-profile img {
+  width: 140px;
+  height: 175px;
+  object-fit: cover;
+}
+.modal-profile h2 {
+  font-size: 1.7rem;
+}
+.modal-profile p {
+  font-size: 0.84rem;
+  margin-top: 6px;
+}
+@media (max-width: 1000px) {
+  .nav-links {
+    gap: 14px;
+  }
+  .nav-links a {
+    font-size: 0.8rem;
+  }
+  .practice-grid,
+  .lawyer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .lawyer-tools {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .lawyer-tools input {
+    grid-column: span 2;
+  }
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 760px) {
+  .container {
+    width: min(100% - 30px, 620px);
+  }
+  header {
+    height: 72px;
+  }
+  .menu-toggle {
+    display: block;
+  }
+  .navbar > .btn {
+    display: none;
+  }
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 72px;
+    left: 0;
+    right: 0;
+    background: white;
+    box-shadow: var(--shadow);
+    padding: 15px 24px 22px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+  }
+  .nav-links.open {
+    display: flex;
+  }
+  .nav-links a {
+    padding: 12px 0;
+    border-bottom: 1px solid var(--line);
+    font-size: 0.93rem;
+  }
+  .section {
+    padding: 62px 0;
+  }
+  .hero,
+  .page-hero {
+    padding: 50px 0;
+  }
+  .hero-grid,
+  .split,
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .hero-image-wrap {
+    height: 350px;
+  }
+  .hero h1 {
+    font-size: clamp(2.55rem, 10vw, 3.7rem);
+  }
+  .practice-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 11px;
+  }
+  .practice-card {
+    padding: 16px 13px;
+    min-height: 175px;
+  }
+  .lawyer-tools {
+    grid-template-columns: 1fr 1fr;
+  }
+  .lawyer-tools input,
+  .lawyer-tools button {
+    grid-column: 1/-1;
+  }
+  .lawyer-grid {
+    gap: 11px;
+  }
+  .lawyer-photo {
+    height: 165px;
+  }
+  .lawyer-info {
+    padding: 12px;
+  }
+  .lawyer-info h3 {
+    font-size: 1rem;
+  }
+  .card-actions {
+    flex-direction: column;
+  }
+  .services-grid,
+  .audience-grid,
+  .steps,
+  .testimonials {
+    grid-template-columns: 1fr;
+  }
+  .service-detail {
+    padding: 18px;
+  }
+  .split img {
+    height: 300px;
+  }
+  .cta-inner {
+    display: block;
+  }
+  .cta .btn {
+    margin-top: 18px;
+  }
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+  .form-group.full {
+    grid-column: auto;
+  }
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+  .modal {
+    padding: 22px 18px;
+  }
+  .modal-profile {
+    grid-template-columns: 95px 1fr;
+  }
+  .modal-profile img {
+    width: 95px;
+    height: 130px;
+  }
+}
+@media (max-width: 430px) {
+  .brand {
+    font-size: 1.5rem;
+  }
+  .hero-trust {
+    gap: 10px;
+  }
+  .hero-trust span {
+    font-size: 0.7rem;
+  }
+  .lawyer-price small {
+    display: block;
+  }
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+  .modal-profile {
+    grid-template-columns: 1fr;
+  }
+  .modal-profile img {
+    width: 100%;
+    height: 200px;
+  }
+}
